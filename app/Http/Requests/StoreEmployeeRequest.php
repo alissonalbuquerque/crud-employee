@@ -21,10 +21,12 @@ class StoreEmployeeRequest extends FormRequest
      */
     public function rules(): array
     {
+        $employee_id = $this->route('id');
+
         return [
             'name'     => 'required',
             'phone'    => 'nullable|numeric|digits:11',
-            'document' => 'nullable|numeric|digits:11|unique:employees',
+            'document' => 'nullable|numeric|digits:11|unique:employees' .','. $employee_id,
             'birthday' => 'nullable|date',
             'gender'   => 'required',
         ];
@@ -38,10 +40,11 @@ class StoreEmployeeRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'name.required'    => 'Nome é Obrigatório!',
+            'name.required'    => 'Nome é Obrigatório',
             'gender.required'  => 'Gênero é Obrigatório',
             'document.numeric' => 'CPF deve conter apenas números',
             'document.digits'  => 'CPF deve ter 11 números',
+            'document.unique'  => 'CPF já foi cadastrado',
             'phone.numeric'    => 'Telefone deve conter apenas números',
             'phone.digits'     => 'Telefone deve ter 11 números',
             'birthday.date'    => 'Data de Nascimento deve conter uma data valida'
