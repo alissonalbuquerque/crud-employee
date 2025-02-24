@@ -26,7 +26,7 @@ class StoreEmployeeRequest extends FormRequest
         return [
             'name'     => 'required',
             'phone'    => 'nullable|numeric|digits:11',
-            'document' => 'nullable|numeric|digits:11|unique:employees' .','. $employee_id,
+            'document' => 'nullable|numeric|digits:11|unique:employees',
             'birthday' => 'nullable|date',
             'gender'   => 'required',
         ];
