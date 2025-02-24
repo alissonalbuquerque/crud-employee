@@ -44,15 +44,17 @@ class EmployeeController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $model = Employee::findOrFail($id);
+
+        return view('employee.update', ['model' => $model]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(StoreEmployeeRequest $request, string $id)
     {
-        //
+        return redirect()->route('employee.edit', $id)->with('success', 'Usuário atualizado com sucesso!');
     }
 
     /**

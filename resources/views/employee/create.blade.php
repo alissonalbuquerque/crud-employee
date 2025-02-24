@@ -16,7 +16,7 @@
 
                     {{--  --}}
 
-                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-96">
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-100">
 
                             @if ($errors->any())
                                 <div class="bg-red-600 text-white p-2 mb-3 rounded">
