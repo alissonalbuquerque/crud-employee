@@ -19,13 +19,13 @@
 
     <div class="py-12">
 
-        @if (session('success'))
-            <div class="bg-green-600 text-white p-2 mb-3 rounded">
-                {{ session('success') }}
-            </div>
-        @endif
-
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+            @if (session('success'))
+                <div class="bg-green-600 text-white p-2 mb-3 rounded">
+                    {{ session('success') }}
+                </div>
+            @endif
 
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
 
@@ -48,7 +48,7 @@
                                 <td class="w-1/6 py-4 px-6 text-left text-gray-300 font-bold uppercase border-b border-gray-700"> {{ $model->birthday }}</td>
                                 <td class="w-1/6 py-4 px-6 text-left text-gray-300 font-bold uppercase border-b border-gray-700"> {{ $model->phone }}</td>
                                 <td class="w-1/6 py-4 px-6 text-left text-gray-300 font-bold uppercase border-b border-gray-700"> {{ $model->genderAsText }}</td>
-                                <td class="py-4 px-6 border-b border-gray-700">
+                                <td class="py-4 px-6 border-b border-gray-700 flex items-center space-x-4">
 
                                     <!-- Botão Editar -->
                                     <a href="{{ route('employee.edit', $model->id) }}"
