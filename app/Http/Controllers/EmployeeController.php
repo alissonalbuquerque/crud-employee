@@ -56,7 +56,11 @@ class EmployeeController extends Controller
     {
         $model = Employee::findOrFail($id);
 
-        $model->fill($request->all());
+        $model->name     = $request->input('name');
+        $model->document = $request->input('document');
+        $model->birthday = $request->input('birthday');
+        $model->phone    = $request->input('phone');
+        $model->gender   = $request->input('gender');
 
         $model->save();
 
