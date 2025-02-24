@@ -33,7 +33,7 @@
                                 <div class="mb-4">
                                     <label for="name" class="block text-gray-300 mb-1">Nome</label>
                                     <input type="text" id="name" name="name" value="{{ old('name') }}"
-                                        class="w-full px-3 py-2 bg-gray-700 text-black border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        class="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </div>
 
                                 {{--  --}}
@@ -41,7 +41,7 @@
                                 <div class="mb-4">
                                     <label for="document" class="block text-gray-300 mb-1">CPF</label>
                                     <input type="text" id="document" name="document" value="{{ old('document') }}"
-                                        class="w-full px-3 py-2 bg-gray-700 text-black border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        class="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         placeholder="Exemplo: 123.456.789-00">
                                 </div>
 
@@ -49,21 +49,21 @@
                                 <div class="mb-4">
                                     <label for="birthday" class="block text-gray-300 mb-1">Data de Nascimento</label>
                                     <input type="date" id="birthday" name="birthday" value="{{ old('birthday') }}"
-                                        class="w-full px-3 py-2 bg-gray-700 text-black border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        class="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </div>
 
                                 <!-- Campo Telefone -->
                                 <div class="mb-4">
                                     <label for="phone" class="block text-gray-300 mb-1">Telefone</label>
                                     <input type="text" id="phone" name="phone" value="{{ old('phone') }}"
-                                        class="w-full px-3 py-2 bg-gray-700 text-black border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        class="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         placeholder="Exemplo: (11) 91234-5678">
                                 </div>
 
                                 <!-- Campo Gênero -->
                                 <div class="mb-4">
                                     <label for="gender" class="block text-gray-300 mb-1">Gênero</label>
-                                    <select id="gender" name="gender" class="w-full px-3 py-2 bg-gray-700 text-black border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <select id="gender" name="gender" class="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                                         <option value="">Selecione</option>
                                         @foreach(Employee::list_genders() as $key => $value)
                                             <option value="{{ $key }}" {{ old('gender') == $key ? 'selected' : '' }}> {{ $value }}</option>
